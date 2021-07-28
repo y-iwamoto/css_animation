@@ -1,0 +1,52 @@
+.box {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wave {
+    background: linear-gradient(#92FE9D, #00C9FF);
+    z-index: 3;
+    opacity: .9;
+    position: absolute;
+    width: 180vw;
+    height: 180vw;
+    top: 37%;
+    left: -37%;
+    transform-origin: 50% 48%;
+    border-radius: 45%;
+    animation: drift 5000ms infinite ease-in-out, bg-color-wave 5s infinite ease-in;
+}
+.wave.-two {
+    background: linear-gradient(#2980B9, #6DD5FA);
+    opacity: .4;
+    z-index: 2;
+    animation: drift 9000ms infinite ease-in-out, bg-color-wave-2 9s infinite ease-in;
+}
+.wave.-three {
+    background: linear-gradient(#B2FEFA, #0ED2F7);
+    animation: drift 7000ms infinite ease-in-out, bg-color-wave 7s infinite ease-in;;
+    opacity: .1;
+    z-index: 1;
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+    line-height: 100vh;
+    text-align: center;
+    color: #ffffff;
+}
+
+@keyframes drift {
+    0% {
+        transform: rotate(0deg);
+    }
+    0% {
+        transform: rotate(360deg);
+    }
+
+}
